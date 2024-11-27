@@ -8,7 +8,6 @@ import Score
 # import classes
 import Map
 import Rock
-import Test
 
 # initialize display and map
 grid = Map.Map()
@@ -16,7 +15,6 @@ win = grid.createMap()
 
 # Make Objects
 Rock.make(grid)
-Test.make(grid)
 
 while True:
     for event in pygame.event.get():
