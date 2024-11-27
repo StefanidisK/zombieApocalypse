@@ -2,7 +2,6 @@
 import pygame
 import Background
 import random
-import Test
 
 # import objects
 import Object
@@ -19,11 +18,10 @@ class Rock(Object.Object):
     def moveRight(self, map):
         background = Background.Background(map.picSize)
         if self.x < 11 and not self.isMoved:
-            if type(map.map[self.x + 1][self.y]) != Test.Test:
-                map.map[self.x][self.y] = background
-                self.x = self.x + 1
-                map.map[self.x][self.y] = self
-                self.isMoved = True
+            map.map[self.x][self.y] = background
+            self.x = self.x + 1
+            map.map[self.x][self.y] = self
+            self.isMoved = True
         return map
 
 def make(map):
